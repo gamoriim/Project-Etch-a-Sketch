@@ -7,7 +7,7 @@ for(let i = 0; i < 256; i++) {
     
     // charge the color
     cell.addEventListener("mouseenter", ()=> {
-    cell.classList.add("markdown");
+        cell.classList.add("markdown");
 })
     div.appendChild(cell);
 }
@@ -23,16 +23,18 @@ btn.addEventListener("click", ()=> {
         alert("Invalid number, please enter a number between 1 and 100");
     } else {
         div.innerHTML = "";
-        for(let i = 0; i < value; i++) {
-    const cell = document.createElement("div");
-    cell.classList.add("cell");
-    
-    // charge the color
-    cell.addEventListener("mouseenter", ()=> {
-    cell.classList.add("markdown");
-})
-    div.appendChild(cell);
-}
+        for(let i = 0; i < value*value; i++) {
+            const cell = document.createElement("div");
+            cell.classList.add("cell");
+            div.appendChild(cell);
+            cell.style.width = `${512 / value}px`;
+            cell.style.height = `${512 / value}px`;
+
+            cell.addEventListener("mouseenter", ()=> {
+                cell.classList.add("markdown");
+            })
+            div.appendChild(cell);
+        }
 
     }
 })
