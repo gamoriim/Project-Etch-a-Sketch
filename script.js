@@ -1,4 +1,5 @@
 const div = document.querySelector("#container");
+const cell = document.createElement("div");
 
 for(let i = 0; i < 256; i++) {
     const cell = document.createElement("div");

@@ -12,7 +12,9 @@
     flex-wrap: wrap;
     width: 512px;
     height: 512px;
-    gap: 0;}
+    gap: 0;
+    overflow: hidden;
+}
 
 .cell {
       width: 30px;
